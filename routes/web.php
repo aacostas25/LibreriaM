@@ -20,6 +20,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::post('store',[ProovedorController::class,'store'])->name('proovedor.store');
 
-Route::get('/proovedor', [App\Http\Controllers\ProovedorController::class, 'index']);
+Route::get('/proovedor', [App\Http\Controllers\ProovedorController::class, 'index'])->name('proovedor.listaproovedor');
+//Route::resource('proovedor','App\Http\Controllers\ProovedorController');
+
+Route::post('/store', [App\Http\Controllers\ProovedorController::class, 'store'])->name('proovedor.store');
 //Route::resource('proovedor','App\Http\Controllers\ProovedorController');

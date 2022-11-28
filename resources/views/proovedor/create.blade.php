@@ -50,10 +50,11 @@
   <br>
   <br>
   <div class="container text-center">
+    <form action="{{route('proovedor.store')}}" method="post">
+    @csrf
     <div class="row">
       <div class="col-6 col-md-4"></div>
         <div class="col-6 col-md-4">
-            <form id="formulario" class="formulario" action="">
                 <div class="formulario-grupo" id="grupo-nombre">
                     <label for="nombre" class="formulario-label"><strong>Nombre del proveedor</strong></label>
                     <div class="formulario-grupo-input">
@@ -92,12 +93,13 @@
                     <!-- <p class="formulario__input-error"> No coinciden las longitudes.</p> -->
                 <br>
                 <br>
-                <button type="submit" class="btn btn-danger" id="boton" onclick="vacios()" disabled>Enviar</button>
-            </form>
+                <button type="submit" class="btn btn-danger" id="boton" onclick="vacios()" >Enviar</button>
         </div>
         <div class="col-6 col-md-4"></div>
     </div>
+    </form>
  </div>
+ <!-- <script src="js/registroproovedores.js"></script> -->
 </body>
 <footer>
   <br>

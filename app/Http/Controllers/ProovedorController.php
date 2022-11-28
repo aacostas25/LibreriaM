@@ -16,7 +16,7 @@ class ProovedorController extends Controller
     {
         //
         $proovedor = Proovedor::all();
-        return view('proovedor.index');
+        return view('proovedor.create');
     }
 
     /**
@@ -45,7 +45,7 @@ class ProovedorController extends Controller
         $proovedor -> celular = $request -> celular;
         $proovedor -> nit = $request -> nit;
         $proovedor -> save();
-        return redirect()->route('productos.index');
+        return redirect()->route('proovedor.listaproovedor');
     }
 
     /**
@@ -85,7 +85,7 @@ class ProovedorController extends Controller
         $proovedor -> celular = $request -> celular;
         $proovedor -> nit = $request -> nit;
         $proovedor -> save();
-        return redirect()->route('proovedor.index');
+        return redirect()->route('proovedor.create');
     }
 
     /**
@@ -97,6 +97,6 @@ class ProovedorController extends Controller
     public function destroy($id)
     {
         $proovedor = Proovedor::destroy($id);
-        return redirect()->route('proovedor.index');
+        return redirect()->route('proovedor.create');
     }
 }
